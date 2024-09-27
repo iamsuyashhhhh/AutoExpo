@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root{
+    --color-color-primary: #1743e3;
+    --color-white: #eaeaea;
+    --color-dark: #333;
+    --color-black:#222;
+}
+
+.btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 28px;
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary) ;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: var(--color-white);
+    letter-spacing: .4px;
+    font-weight: 600;
+    transition: .4s ease;
+    opacity: 0;
+    animation:logoAni 1s ease forwards ;
+    animation-delay: 1s;
+}
+
+.bnt:hover{
+    background: red;
+    color: white;
+}
+.container{
+    max-width: 1620px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*...............start nav bar..............*/
+nav{
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-container ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.logo h3{
+    font-size: 25px;
+    color: var(--color-black);
+    opacity: 0;
+    animation:logoAni 1s ease forwards ;
+}
+.nav-link li a{
+    color: var(--color-black);
+    font-size: 17px;
+    transition: .4s ease;
+    display: inline-block;
+    animation: NavliaAni forwards 1s ease;
+    animation-delay: calc(.2s * var(--i));
+    opacity: 0;
+}
+.nav-link li a:hover{
+    color: var(--color-primary);
+}
+.nav-link li.active{
+    color: var(--color-primary);
+}
+.social-link li a{
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    transform: rotate(45deg);
+    transition: .4s ease;
+    animation: socialAni forwards 1s ease;
+    animation-delay: calc(.2s * var(--i));
+    opacity: 0;
+}
+.social-link li a:hover{
+    border-color: var(--color-white);
+}
+.social-link li a i{
+    transform: rotate(-45deg);
+    font-size: 20px;
+    color: var(--color-white);
+}
+/*...............end nav bar..............*/
+/*..............Start Footer section.............*/
+.contact{
+  color: #121212;
+  background: transparent;
+}
+
+/*****************End footer Section***************/
+/*...............start header section..............*/
+header{
+    width: 100;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.header-left{
+    max-width: 620px;
+    position: relative;
+}
+.header-left h1{
+    font-size: 54px;
+    line-height: 1.2;
+    color: var(--color-black);
+    animation: H1Ani forwards 1s ease;
+    opacity: 0;
+    animation-delay: 1s;
+}
+.header-left h3{
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin-top: 5rem;
+    animation: H1Ani forwards 1s ease;
+    opacity: 0;
+    animation-delay: .8s;
+}
+.btn{
+    color: white;
+    background-color: #1743e3;
+}
+.header-left p{
+    margin: 15px 0 30px;
+    line-height: 150%;
+    font-size: 16px;
+    animation: logoAni forwards 1s ease;
+    opacity: 0;
+    animation-delay: .6s;
+}
+.header-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+.header-right{
+    position:relative;
+    width: 450px;
+    height: 450px;
+    transform: rotate(-45deg);
+    right: -7%;
+    margin-top: 5rem;
+}
+.sq-box{
+    height: 100%;
+    width: 100%;
+    border: 25px solid var(--color-color-primary);
+    background: var(--color-white);
+    box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2);
+    animation: zoomOut forwards 1s ease;
+    opacity: 0;
+    animation-delay: .6s;
+}
+.sq-box img{
+    position: absolute;
+    transform: rotate(45deg);
+    max-width: 680px;
+    top: 0;
+    left: -180px;
+    opacity: 0;
+    animation: carAni forwards 1s ease;
+    animation-delay: 1.6s;
+}
+.sq-box2{
+    position:absolute;
+    width: 700px;
+    height: 700px;
+    background:var(--color-color-primary);
+    transform: rotate(45deg);
+    top: -26%;
+    right: -26%;
+    z-index: -1;
+    opacity: 0;
+    animation: sqbox2Ani forwards 1s ease;
+    animation-delay: .6s;
+}
+
+
+/*...............end header section..............*/
+
+/*...............Animation start..............*/
+@keyframes logoAni{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes NavliaAni{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes socialAni{
+    0%{
+        transform: translateX(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes H1Ani{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pAni{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut{
+    0%{
+        transform:scale(1.1);
+        opacity: 0;
+    }
+    100%{
+        transform:scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes carAni{
+    0%{
+        transform:translate(180px,-300px) scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    100%{
+        transform:translate(0,0) scale(1) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes sqbox2Ani {
+    0%{
+        right: -40%;
+        opacity: 0;
+    }    
+    100%{
+        right: -26%;
+        opacity: 1;
+    }    
+}
+/*...............Animation ends..............*/
+
+
+/*...................page second ...............*/
+h1{
+    font-family: 'montserrat';
+    position: relative;
+    
+  }
+
+
+  .card{
+    margin-top: 8rem;
+  }
+
+  .card-img-top{
+    padding: 25px;
+    transition: transform .5s;
+
+  }
+
+  .button{
+    float: right;
+  }
+
+  .card{
+    background-color: #f5f5f5;
+    border-style: none !important;
+  }
+
+  hr{
+    border-color: #dbdbdb;
+  }
+
+  .card-text{
+    font-weight: bold;
+  }
+
+  .card-img-top:hover{
+    transform: scale(1.1);
+  }
+
+  @media (min-width: 1024px) and (max-width: 2000px){
+    .car-section{
+      margin: 5rem !important;
+    }
+  }
+
+
+   /* Navbar section */
+
+   .navbar{
+    position: fixed;
+    width: 100%;
+    background: #23393d !important;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.25);
+    transition: .6s;
+    z-index: 10;
+  }
+
+  .logo-one{
+    height:50px; 
+    margin: 10px 50px 10px;
+  }
+
+  .navbar-nav{
+    font-family: 'montserrat';
+    font-weight: bold;
+  }
+
+  .nav-link{
+    margin-right: 10px;
+    color: #fff !important;
+  }
+
+  .nav-link:hover{
+    color: #F0c540 !important;
+  }
+
+  nav.sticky{
+    margin-right: 5px;
+  }
+
+  @media (max-width:768px){
+
+    .navbar{
+      z-index: 10;
+    }
+
+    .navbar-brand .logo-one{
+      margin-left: 5px !important;
+      height: 40px;
+    }
+
+    .icons{
+      margin-bottom: 1rem;
+    }
+
+    .row{
+      margin: 1rem;
+      margin-top: 2rem;
+    }
+
+    h1{
+      font-size: 1.8rem;
+      top:8rem;
+    }
+
+
+  }
+
+    /* footer section */
+    footer{
+      background: white;
+      color: #fff;
+      font-family: 'montserrat';
+    }
+    .logo2{
+      height:50px; 
+      margin:30px 20px 5px;
+    }
+
+    .content1{
+      margin:20px;
+      font-size: 16px;
+      line-height: 25px;
+      
+    }
+
+    .content2{
+      margin-top: 50px;
+      margin-left: 30px;
+      font-weight: bold;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      display: inline-block;
+      font-family: 'open sans';
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .icons{
+      margin-left: 14%;
+      margin-top: 4%;
+    }
+
+    .icons .icon-link{
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    .footer2{
+      background: #0f0f0f;
+      color: grey;
+      padding: 3px;
+      text-align: center;
+      font-family: 'open sans';
+    }
+    /*.....................page second ends..........*/
