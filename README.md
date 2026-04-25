@@ -30,8 +30,8 @@ npm run install:all
 
 2. Create env files if needed:
 
-- Copy `server/.env.example` to `server/.env`
-- Copy `client/.env.example` to `client/.env`
+- Copy `server/.env` to `server/.env`
+- Copy `client/.env` to `client/.env`
 
 3. Start the app:
 
@@ -52,17 +52,4 @@ MONGO_URI=your_mongodb_connection_string
 
 When `MONGO_URI` is missing, the server automatically uses sample car data for presentation/demo purposes.
 
-## Good expo presentation angle
 
-You can explain the project journey like this:
-
-- The original version helped you learn HTML and CSS.
-- The upgraded version solves the real idea: comparing multiple car brands in one app.
-- The frontend is now dynamic, the backend exposes APIs, and the app is ready for MongoDB integration.
-
-## Suggested next upgrades
-
-- Add admin panel to add/edit cars
-- Add user login and favorite lists
-- Store compare history in MongoDB
-- Add brand-wise detail pages and charts
